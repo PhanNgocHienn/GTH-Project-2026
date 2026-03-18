@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Tech Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero-section">
+<div class="hero-content">
+<h1>Green Tech Hub</h1>
+<p>Technology for a Greener Future</p>
+</div>
+</header>
+<section class="solutions-section">
+<h2>Cac Giai Phap Cong Nghe Xanh</h2>
+<div class="solutions-grid">
+<div class="solution-card">
+<h3>Solar Energy</h3>
+<p>Giai phap nang luong mat troi</p>
+</div>
+<div class="solution-card">
+<h3>Waste Management</h3>
+<p>Quan ly rac thai thong minh</p>
+</div>
+<div class="solution-card">
+<h3>Smart Irrigation</h3>
+<p>Tuoi tieu tiet kiem nuoc</p>
+</div>
+</div>
+</section>
+<section class="contact-section">
+<h2>Lien He Hop Tac</h2>
+<form id="contactForm">
+<div class="form-group">
+<label for="fullname">Ho ten:</label>
+<input type="text" id="fullname" name="fullname" required>
+</div>
+<div class="form-group">
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required>
+<span id="emailError" class="error-msg">Dinh dang email khong hop le</span>
+</div>
+<div class="form-group">
+<label for="message">Loi nhan:</label>
+<textarea id="message" name="message" rows="4" required></textarea>
+</div>
+<button type="submit">Gui Thong Tin</button>
+<p id="successMsg" class="success-msg">Cam on ban da lien he!</p>
+</form>
+</section>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+e.preventDefault();
+const email = document.getElementById('email').value;
+const emailError = document.getElementById('emailError');
+const successMsg = document.getElementById('successMsg');
+const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!emailPattern.test(email)) {
+emailError.style.display = 'block';
+successMsg.style.display = 'none';
+} else {
+emailError.style.display = 'none';
+successMsg.style.display = 'block';
+this.reset();
+}
+});
+</script>
+</body>
+</html>
