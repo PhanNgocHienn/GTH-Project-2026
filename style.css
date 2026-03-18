@@ -1,0 +1,16 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+.hero-section { background: #27ae60; height: 60vh; display: flex; align-items: center; justify-content: center; color: white; text-align: center; }
+.hero-content h1 { font-size: 3rem; margin-bottom: 10px; }
+.solutions-section { padding: 50px 20px; text-align: center; background-color: #f9f9f9; }
+.solutions-grid { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.solution-card { background: white; padding: 20px; border-radius: 8px; width: 300px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+.contact-section { padding: 50px 20px; max-width: 600px; margin: 0 auto; }
+.form-group { margin-bottom: 15px; }
+.form-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+.form-group input, .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; }
+button { background-color: #27ae60; color: white; border: none; padding: 10px 20px; border-radius: 4px; cursor: pointer; width: 100%; font-size: 1rem; }
+.error-msg { color: red; font-size: 0.9rem; display: none; margin-top: 5px; }
+.success-msg { color: green; font-weight: bold; text-align: center; display: none; margin-top: 15px; }
+@media (max-width: 768px) {
+.solutions-grid { flex-direction: column; align-items: center; }
+}
